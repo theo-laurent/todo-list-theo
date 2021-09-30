@@ -40,6 +40,7 @@ export default function CreateMessage(props) {
             <h4>Titre ou jour :</h4>
           </label>
           <input
+            required
             className="form-control mt-2"
             id="inputJour"
             value={jour}
@@ -53,6 +54,7 @@ export default function CreateMessage(props) {
             <h4>Message :</h4>
           </label>
           <textarea
+            required
             rows="4"
             className="form-control mt-2"
             id="inputMessage"
