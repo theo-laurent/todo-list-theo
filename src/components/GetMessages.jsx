@@ -11,8 +11,9 @@ export default function GetMessages(props) {
   useEffect(
     function () {
       fetch(
-        "http://localhost:4200/api/messages/" ||
-          "https://todo-list-theo.herokuapp.com/api/messages/",
+        window.location.hostname === "localhost"
+          ? "http://localhost:4200/api/messages/"
+          : "https://todo-list-theo.herokuapp.com/api/messages/",
         {
           method: "GET",
           headers: {

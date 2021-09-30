@@ -6,10 +6,13 @@ export default function CreateMessage(props) {
 
   const submit = function (e) {
     e.preventDefault();
+    console.log(window.location);
 
     fetch(
-      "http://localhost:4200/api/messages/" ||
-        "https://todo-list-theo.herokuapp.com/api/messages/",
+      window.location.hostname === "localhost"
+        ? "http://localhost:4200/api/messages/"
+        : "https://todo-list-theo.herokuapp.com/api/messages/",
+
       {
         method: "POST",
         headers: {

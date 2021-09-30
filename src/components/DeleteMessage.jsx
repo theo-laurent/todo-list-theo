@@ -3,8 +3,9 @@ export default function DeleteMessage(props) {
     e.preventDefault();
 
     fetch(
-      "http://localhost:4200/api/messages/" ||
-        "https://todo-list-theo.herokuapp.com/api/messages/",
+      window.location.hostname === "localhost"
+        ? "http://localhost:4200/api/messages/"
+        : "https://todo-list-theo.herokuapp.com/api/messages/",
       {
         method: "DELETE",
         headers: {
