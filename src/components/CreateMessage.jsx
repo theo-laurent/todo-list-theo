@@ -7,13 +7,17 @@ export default function CreateMessage(props) {
   const submit = function (e) {
     e.preventDefault();
 
-    fetch("http://localhost:4200/api/messages/", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ jour: jour, message: message }),
-    })
+    fetch(
+      "http://localhost:4200/api/messages/" ||
+        "https://todo-list-theo.herokuapp.com/api/messages/",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ jour: jour, message: message }),
+      }
+    )
       .then(function (res) {
         return res.json();
       })

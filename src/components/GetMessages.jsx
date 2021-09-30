@@ -10,12 +10,16 @@ export default function GetMessages(props) {
 
   useEffect(
     function () {
-      fetch("http://localhost:4200/api/messages/", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      fetch(
+        "http://localhost:4200/api/messages/" ||
+          "https://todo-list-theo.herokuapp.com/api/messages/",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
         .then(function (res) {
           return res.json();
         })

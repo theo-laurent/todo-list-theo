@@ -1,6 +1,6 @@
 {
   "name": "todo-list",
-  "homepage": "https://theo-laurent.github.io/todo-list",
+  "homepage": "https://theo-laurent.github.io/todo-list-theo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,7 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
